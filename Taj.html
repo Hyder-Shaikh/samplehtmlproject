@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taj Restaurant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      
+    }
+    .logo h3 {
+      color: #c43b3f;
+      font-size: 22px;
+    }
+    .navlink ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    .navlink a {
+      text-decoration: none;
+      color: gray;
+      font-weight: 500;
+    }
+    .navlink a:hover {
+      color: #c43b3f;
+    }
+
+    #home {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #e25559, #c43b3f);
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+      transition: color 2s, transform 0.3s ease-in;
+    }
+
+    #home:hover{
+      background-color: white;
+      color: darkred;
+      transform: scale(1.1);
+    }
+    .red {
+      max-width: 600px;
+    }
+    .red h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .red h4 {
+      font-weight: 400;
+      margin-bottom: 25px;
+    
+    }
+
+  
+    .btn1, .btn2 {
+      border-radius: 4px;
+      margin: 10px;
+      height: 35px;
+      width: 120px;
+      font-weight: 600;
+    }
+    .btn1 {
+      background-color: white;
+      color: #c43b3f;
+      border: none;
+      transition: color 2s, transform 0.3s ease-in;
+    }
+
+    .btn1:hover{
+      background-color:darkred;
+      color:white;
+      transform: scale(1.1);
+      transform: rotate(100000000000000000000deg);
+    }
+    
+    
+    .btn2 {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      transition: color 2s,transform 0.3 ease-in;
+    }
+
+    .btn2:hover{
+         background-color: darkred;
+         color: white;
+         transform: scale(1.1);
+         transform: rotate(100000000000000000000deg);
+    }
+
+  
+    .specialties {
+      text-align: center;
+      padding: 60px 20px;
+      background: #fff;
+     
+    }
+    .specialties h2 {
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #333;
+    }
+    .specialty-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .specialty {
+      max-width: 250px;
+      text-align: center;
+       transition: color 2s,transform 0.3s ease-in;
+    }
+    .specialty:hover{
+         background-color: lightgray;
+         color:darkred;
+         transform: scale(1.1);
+           
+    }
+     
+    .specialty i {
+      font-size: 40px;
+      color:darkred;
+      background:white;
+      padding: 20px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+       transition: color 2s,transform 0.3s ease-in;
+    }
+
+    .specialty i:hover{
+      background-color:white;
+      color: darkred;
+      transform: scale(1.1);
+    }
+    .specialty h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #333;
+       transition: color 2s,transform 0.3s ease-in;
+    }
+
+    .specialty h3:hover{
+      background-color: white;
+      color:darkred;
+      transform: scale(1.1);
+    }
+    .specialty p {
+      color: gray;
+      font-size: 14px;
+      line-height: 1.5;
+       transition: color 2s,transform 0.3s ease-in;
+    }
+    
+     .specialty p:hover{
+      background-color:white;
+      color: darkred;
+      transform: scale(1.1);
+     }
+    
+    .hungry {
+      background: linear-gradient(to bottom, #e25559, #c43b3f);
+      text-align: center;
+      color: white;
+      padding: 60px 20px;
+    }
+    .hungry h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .hungry button {
+      background: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: #c43b3f;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 2s, transform 0.3s ease-in; 
+    }
+    .hungry button:hover {
+      background: darkred;
+      color:darkred;
+      transform: scale(1.1);
+      transform: rotate(100000000000000000000deg);
+
+    }
+    .ball{
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 10%;
+      background-color: black;
+      position: relative;
+      margin: 300px 0px 0px 600px;
+      animation: jump 1s infinite ease-in-out;
+
+    }
+
+    @keyframes jump{
+      0%,100%{
+           left:0px;
+      }
+      50%{
+           left:-300px;
+      }
+
+      
+    
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h3>Taj Restaurant</h3>
+      </div>
+      <div class="navlink">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#specialties">Features</a></li>
+          <li><a href="#specialty">Pricing</a></li>
+          <li><a href="#hungry">About</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  
+  <section id="home">
+    <div class="red">
+      <h1>Authentic Flavors</h1>
+      <h4>Experience culinary excellence with our handcrafted dishes made from fresh, local ingredients.</h4>
+      <button class="btn1">View Menu</button>
+      <button class="btn2">Reserve Table</button>
+    </div>
+  </section>
+
+  
+  <section class="specialties">
+    <h2>Our Specialties</h2>
+    <div class="specialty-container">
+      <div class="specialty">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Fresh Ingredients</h3>
+        <p>We source only the freshest local ingredients for all our dishes.</p>
+      </div>
+      <div class="specialty">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h3>Seasonal Menu</h3>
+        <p>Our menu changes with the seasons to bring you the best flavors.</p>
+      </div>
+      <div class="specialty">
+        <i class="fa-solid fa-utensils"></i>
+        <h3>Artisan Chefs</h3>
+        <p>Our chefs bring years of experience and passion to every meal.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ball">
+
+  </div>
+
+  
+  <section class="hungry">
+    <h2>Hungry Yet?</h2>
+
+    <p>Book your table now and experience our culinary creations.</p>
+    <button>Make Reservation</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Taj Restaurant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
